@@ -7,9 +7,10 @@
 import * as http from 'http'
 import * as url from 'url'
 import { StringDecoder } from 'string_decoder'
+import config from './config.mjs'
 
 // The server should responde to all requests with a string
-const PORT = 3000
+const PORT = config.port
 const server = http.createServer((req, res) => {
   
   // Get the URL and parse it
@@ -60,6 +61,7 @@ const server = http.createServer((req, res) => {
       const payloadString = JSON.stringify(payload)
 
       // Return the response
+      res.setHeader('Content-Type', 'application/json')
       res.writeHead(statusCode)
       res.end(payloadString)
       console.log(`Status: ${statusCode} with response: ${payloadString}.`)
@@ -69,7 +71,7 @@ const server = http.createServer((req, res) => {
 
 // Start the serve, and have it listen on port 3000
 server.listen(PORT, () => {
-  console.log(`the server is listening on port ${PORT} now`)
+  console.log(`ENV: ${config.envName} - the server is listening on port ${PORT} now`)
 })
 
 // Define the handlers
