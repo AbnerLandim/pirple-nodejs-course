@@ -8,11 +8,17 @@ import * as http from 'http';
 import * as https from 'https';
 import * as url from 'url';
 import { StringDecoder } from 'string_decoder';
-import config from './config.mjs';
 import * as fs from 'fs';
+import config from './config.mjs';
+import _data from './lib/data.mjs';
 
 const HTTP_PORT = config.httpPort;
 const HTTPS_PORT = config.httpsPort;
+
+// TESTING
+_data.delete('test', 'newFile', (err) => {
+  console.log('error:', err);
+});
 
 // Instantiate the HTTP server
 const httpServer = http.createServer((req, res) => {
