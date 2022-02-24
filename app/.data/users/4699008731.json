@@ -1,1 +1,7 @@
-{"firstName":"Pat","lastName":"The dev","phone":"4699008731","hashedPassword":"4811fdf8b35c5d3eb926241421a1b9ae2a99f8042fc199ccad890d6c9b23b340","tosAgreement":true}
+{
+  "firstName": "Pat",
+  "lastName": "The dev",
+  "phone": "4699008731",
+  "hashedPassword": "4811fdf8b35c5d3eb926241421a1b9ae2a99f8042fc199ccad890d6c9b23b340",
+  "tosAgreement": true
+}
