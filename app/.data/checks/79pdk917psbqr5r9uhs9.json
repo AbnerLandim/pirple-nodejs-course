@@ -1,1 +1,1 @@
-{"id":"79pdk917psbqr5r9uhs9","userPhone":"4199008731","url":"google.com","method":"get","successCodes":[200,201],"timeoutSeconds":3}
+{"id":"79pdk917psbqr5r9uhs9","userPhone":"4199008731","protocol":"http","url":"google.com","method":"get","successCodes":[200,201],"timeoutSeconds":3,"state":"down","lastChecked":1645792655158}

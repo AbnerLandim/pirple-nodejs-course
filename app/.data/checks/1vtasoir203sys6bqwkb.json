@@ -1,1 +1,1 @@
-{"id":"1vtasoir203sys6bqwkb","userPhone":"4398987786","url":"google.com","method":"get","successCodes":[200,201],"timeoutSeconds":3}
+{"id":"1vtasoir203sys6bqwkb","userPhone":"4398987786","protocol":"http","url":"google.com","method":"get","successCodes":[200,201],"timeoutSeconds":3,"state":"down","lastChecked":1645792656615}

@@ -541,6 +541,7 @@ handlers._checks.post = (data, callback) => {
               const checkObject = {
                 id: checkId,
                 userPhone,
+                protocol,
                 url,
                 method,
                 successCodes,

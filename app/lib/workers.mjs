@@ -122,7 +122,7 @@ workers.performCheck = (originalCheckData) => {
   }
 
   // Mark that the outcome has not been sent yet
-  const outcomeSent = false
+  let outcomeSent = false
 
   // Parse the hostname and the path out of the original check
   const parsedUrl = url.parse(
@@ -142,14 +142,13 @@ workers.performCheck = (originalCheckData) => {
   }
 
   // Instantiate the request object (using either the http or https module)
-  const _moduleToUse =
-    originalCheckData.module.protocol === 'http' ? http : https
+  const _moduleToUse = originalCheckData.protocol === 'http' ? http : https
   const req = _moduleToUse.request(requestDetails, (res) => {
     // Grab the status of the sent request
     const status = res.statusCode
 
     // Update the check outcome and pass the data along
-    check.responseCode = status
+    checkOutcome.responseCode = status
     if (!outcomeSent) {
       workers.processCheckOutcome(originalCheckData, checkOutcome)
       outcomeSent = true
@@ -206,8 +205,10 @@ workers.processCheckOutcome = (originalCheckData, checkOutcome) => {
   newCheckData.state = state
   newCheckData.lastChecked = Date.now()
 
+  console.log(checkOutcome, state, alertWarranted)
+
   //  Save the updates
-  _data.update('checks', newCheckData.id, (err) => {
+  _data.update('checks', newCheckData.id, newCheckData, (err) => {
     if (!err) {
       // Send the new check data to the next phase in the process if needed
       if (alertWarranted) {

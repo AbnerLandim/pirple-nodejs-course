@@ -1,1 +1,1 @@
-{"id":"pp8dgui6v7940zap7r18","userPhone":"4398987786","url":"yahoo.com","method":"get","successCodes":[200,201],"timeoutSeconds":3}
+{"id":"pp8dgui6v7940zap7r18","userPhone":"4398987786","url":"yahoo.com","protocol":"http","method":"get","successCodes":[200,201],"timeoutSeconds":3,"state":"down","lastChecked":1645792655158}

@@ -1,1 +1,1 @@
-{"id":"00vl1s4putacn6gso25h","userPhone":"4199008731","url":"google.com","method":"get","successCodes":[200,201],"timeoutSeconds":3}
+{"id":"00vl1s4putacn6gso25h","userPhone":"4199008731","protocol":"http","url":"google.com","method":"get","successCodes":[200,201],"timeoutSeconds":3,"state":"down","lastChecked":1645792656614}
